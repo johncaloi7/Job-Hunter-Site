@@ -14,7 +14,7 @@ export const getAllJobsThunk = async (_, thunkAPI) => {
   try {
     const resp = await customFetch.get(url, authHeader(thunkAPI));
 
-    console.log(resp.data);
+    console.log(resp);
     return resp.data;
   } catch (error) {
     return checkForUnauthorizedResponse(error, thunkAPI);
